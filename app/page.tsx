@@ -44,8 +44,8 @@ export default function Home() {
       reader.readAsDataURL(file);
 
       // Initialize Gemini API
-      const genAI = new GoogleGenerativeAI("AIzaSyDI-lJ9HgVxgp3MeEyvzYCTqVZaTdkQhYQ");
-      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
+      const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY as string);
+      const model = genAI.getGenerativeModel({ model: process.env.NEXT_PUBLIC_GEMINI_API_MODEL as string });
       
       const imageBytes = await fileToGenerativePart(file);
 
