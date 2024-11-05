@@ -44,7 +44,7 @@ export default function Home() {
       reader.readAsDataURL(file);
 
       // Initialize Gemini API
-      const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY as string);
+      const genAI = new GoogleGenerativeAI("AIzaSyDI-lJ9HgVxgp3MeEyvzYCTqVZaTdkQhYQ");
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
       
       const imageBytes = await fileToGenerativePart(file);
@@ -124,7 +124,7 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-semibold text-green-800 mb-3">
-                Identify Your Plant {process.env.NEXT_PUBLIC_GEMINI_API_KEY}
+                Identify Your Plant
               </h2>
               <p className="text-gray-600">
                 Take or upload a clear photo of your plant to get started
