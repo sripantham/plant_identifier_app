@@ -124,7 +124,7 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-semibold text-green-800 mb-3">
-                Identify Your Plant
+                Identify Your Plant {process.env.NEXT_PUBLIC_GEMINI_API_KEY}
               </h2>
               <p className="text-gray-600">
                 Take or upload a clear photo of your plant to get started
